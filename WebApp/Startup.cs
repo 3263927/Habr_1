@@ -28,9 +28,17 @@ namespace WebApp
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+
+			String ConnStr = "";
+#if DEBUG
+			ConnStr = "Habr1_Local";
+#else
+			ConnStr = "Habr1_Production";
+#endif
+
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(
-					Configuration.GetConnectionString("Habr1_Local")));
+					Configuration.GetConnectionString(ConnStr)));
 			services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 			services.AddControllersWithViews();
