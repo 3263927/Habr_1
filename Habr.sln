@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{95972BA2-5560-4D8B-AF7E-1D0F7AA20D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabrDB", "HabrDB\HabrDB.csproj", "{415A3511-0CA6-4C22-9495-112DD5F90050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HabrDB", "HabrDB\HabrDB.csproj", "{415A3511-0CA6-4C22-9495-112DD5F90050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTest", "DBTest\DBTest.csproj", "{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{415A3511-0CA6-4C22-9495-112DD5F90050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415A3511-0CA6-4C22-9495-112DD5F90050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415A3511-0CA6-4C22-9495-112DD5F90050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{415A3511-0CA6-4C22-9495-112DD5F90050} = {95972BA2-5560-4D8B-AF7E-1D0F7AA20D11}
+		{E2C8D910-B1CD-4F5B-92C9-D4FDB05708A5} = {95972BA2-5560-4D8B-AF7E-1D0F7AA20D11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72319DE2-DFC5-4720-90FC-2E0B90AF8065}
