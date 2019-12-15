@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Extensions;
 
 namespace DBTest
 {
@@ -32,6 +33,13 @@ namespace DBTest
 			Phone ph1 = db.Phones.Single();
 			Assert.AreEqual(PhoneName, ph1.Model);
 			Assert.AreEqual(now, ph1.DayZero);
+		}
+
+		[TestMethod]
+		public void DeleteTable_Test()
+		{
+			HabrDBContext db = new HabrDBContext().CreateTestContext();
+			db.Database.EnsureDeleted(db.Phones);
 		}
 	}
 }
