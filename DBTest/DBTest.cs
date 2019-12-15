@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DBTest
 {
@@ -11,7 +12,7 @@ namespace DBTest
 	public class DBTest
 	{
 		[TestMethod]
-		public void TestMethod1()
+		public async Task AddPhone_Test()
 		{
 			String PhoneName = "Nokia";
 			DateTime now = DateTime.Now;
@@ -19,15 +20,14 @@ namespace DBTest
 			HabrDBContext db = new HabrDBContext().CreateTestContext();
 			db.Database.EnsureCreated();
 
-			List<Phone> Phones = db.Phones.ToList();
+			List<Phone> Phones = await db.GetAllPhones();
 			Assert.AreEqual(0, Phones.Count);
 
 			Phone ph = new Phone();
 			ph.Model = PhoneName;
 			ph.DayZero = now;
 
-			db.Phones.Add(ph);
-			db.SaveChanges();
+			await db.AddPhone(ph);
 
 			Phone ph1 = db.Phones.Single();
 			Assert.AreEqual(PhoneName, ph1.Model);
