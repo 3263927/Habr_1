@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{8BBC5B37-6600-41E0-AE34-27AAFE76FAA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{8BBC5B37-6600-41E0-AE34-27AAFE76FAA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{95972BA2-5560-4D8B-AF7E-1D0F7AA20D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabrDB", "HabrDB\HabrDB.csproj", "{415A3511-0CA6-4C22-9495-112DD5F90050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{8BBC5B37-6600-41E0-AE34-27AAFE76FAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BBC5B37-6600-41E0-AE34-27AAFE76FAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBC5B37-6600-41E0-AE34-27AAFE76FAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415A3511-0CA6-4C22-9495-112DD5F90050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415A3511-0CA6-4C22-9495-112DD5F90050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415A3511-0CA6-4C22-9495-112DD5F90050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415A3511-0CA6-4C22-9495-112DD5F90050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{415A3511-0CA6-4C22-9495-112DD5F90050} = {95972BA2-5560-4D8B-AF7E-1D0F7AA20D11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72319DE2-DFC5-4720-90FC-2E0B90AF8065}
