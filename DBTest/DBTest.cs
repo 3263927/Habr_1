@@ -10,16 +10,13 @@ using Extensions;
 namespace DBTest
 {
 	[TestClass]
-	public class DBTest
+	public class DBTest:DBTestBase
 	{
 		[TestMethod]
 		public async Task AddPhone_Test()
 		{
 			String PhoneName = "Nokia";
 			DateTime now = DateTime.Now;
-
-			HabrDBContext db = new HabrDBContext().CreateTestContext();
-			db.Database.EnsureCreated();
 
 			List<Phone> Phones = await db.GetAllPhones();
 			Assert.AreEqual(0, Phones.Count);
@@ -35,10 +32,9 @@ namespace DBTest
 			Assert.AreEqual(now, ph1.DayZero);
 		}
 
-		[TestMethod]
-		public void DeleteTable_Test()
+		[ClassCleanup]
+		public static void DeleteTable()
 		{
-			HabrDBContext db = new HabrDBContext().CreateTestContext();
 			db.Database.EnsureDeleted(db.Phones);
 		}
 	}
