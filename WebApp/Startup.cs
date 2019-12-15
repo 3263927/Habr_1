@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.IO;
+using HabrDB;
 
 namespace WebApp
 {
@@ -36,11 +36,11 @@ namespace WebApp
 			ConnStr = "Habr1_Production";
 #endif
 
-			services.AddDbContext<ApplicationDbContext>(options =>
+			services.AddDbContext<SecurityDBContext>(options =>
 				options.UseSqlServer(
 					Configuration.GetConnectionString(ConnStr)));
-			services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-				.AddEntityFrameworkStores<ApplicationDbContext>();
+			services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+				.AddEntityFrameworkStores<SecurityDBContext>();
 			services.AddControllersWithViews();
 			services.AddRazorPages();
 		}
