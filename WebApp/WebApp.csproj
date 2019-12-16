@@ -5,6 +5,13 @@
     <UserSecretsId>aspnet-WebApp-A37CA98D-1345-42FD-B90E-6B4F33E32EF8</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
@@ -17,11 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HabrDB\HabrDB.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>
